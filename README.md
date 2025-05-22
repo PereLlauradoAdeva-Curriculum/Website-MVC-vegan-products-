@@ -1,2 +1,7 @@
-# Website-MVC-vegan-products-
-Full-stack vegan e-commerce website built from scratch using the MVC pattern. Includes user login/register, cart system with cookies, database integration, and protected frontend/backend logic. A secure and scalable platform for selling vegan products.
+# 🥑 Vegan Products Webshop (MVC Full-Stack PHP Project)
+
+This project is a **full-stack vegan e-commerce website** developed from scratch following the **Model-View-Controller (MVC)** architecture.  
+It was designed and deployed on a university server, and the files shown here are a direct export from that deployment.
+
+This project demonstrates how to create a structured and secure web application without external frameworks, using only native PHP and HTML/CSS/JS. It emphasizes maintainability and follows good development practices.
+
