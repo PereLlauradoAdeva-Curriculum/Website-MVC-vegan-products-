@@ -1,0 +1,390 @@
+/* Estil general */
+
+/* Ajustar l'espai per al carret en la vista inicial */
+/* Cos principal */
+main {
+    flex-grow: 1;
+    padding: 0 20px;
+    margin-bottom: 320px; /* Ajustar l'espai per al carret i el footer */
+    position: relative;
+    z-index: 1;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f1; /* Color de fons natural i clar */
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantir que la pàgina cobreixi tota la vista */
+    overflow-x: hidden;
+}
+
+body.scrolled #carret {
+    top: 0;  /* Moure el carret cap a dalt */
+    bottom: unset; /* Evitar que el carret es mantingui a la part inferior */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #68b684; /* Verd natural */
+    color: #fff;
+    padding: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: left;
+}
+
+
+/* Estil per a les categories */
+.categories {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 2em;
+    margin: 0;
+}
+
+.categoria {
+    text-align: center;
+    width: 200px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.categoria:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.categoria img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.categoria p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #68b684;
+}
+
+/* Estil per a la llista de productes */
+.productes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 2em;
+}
+
+.producte {
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.producte:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producte img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Estil per a les opcions d'usuari */
+.user-options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-icon {
+    font-size: 1.8rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.user-icon:hover {
+    color: #d4f2d7; /* Tò reforçat per destacar */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.register {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.register:hover {
+    color: #315942;
+}
+
+/* Botons més atractius */
+button {
+    background-color: #68b684;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #466f57;
+    transform: scale(1.05);
+}
+
+/* Afegir espai entre les seccions */
+section {
+    margin-bottom: 2em;
+}
+
+
+/* Estil per al missatge de registre completat */
+.success-message {
+    background-color: #fff;
+    margin: 2em auto;
+    padding: 2em;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.success-message h2 {
+    color: #68b684;
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+}
+
+.success-message p {
+    font-size: 1rem;
+    margin-bottom: 1.5em;
+    color: #333;
+}
+
+.success-message .user-name {
+    color: #68b684;
+    font-weight: bold;
+}
+
+.primary-button {
+    text-decoration: none;
+    background-color: #68b684;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.primary-button:hover {
+    background-color: #466f57;
+    transform: scale(1.05);
+}
+
+
+/* Estil general del formulari */
+form.formulari-general {
+    background-color: #fff;
+    padding: 2em;
+    margin: 2em auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form.formulari-general h2 {
+    text-align: center;
+    color: #68b684;
+    font-size: 1.8rem;
+    margin-bottom: 1.5em;
+}
+
+form.formulari-general label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+form.formulari-general input {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1.5em;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+form.formulari-general input:focus {
+    border-color: #68b684;
+    background-color: #fff;
+    outline: none;
+}
+
+form.formulari-general button {
+    display: block;
+    width: 100%;
+    background-color: #68b684;
+    color: #fff;
+    padding: 0.8em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form.formulari-general button:hover {
+    background-color: #466f57;
+    transform: scale(1.05);
+}
+
+
+
+/* Formulari específic per als productes */
+.formulari-producte {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.formulari-producte button.btn-afegir-carret {
+    background-color: #68b684;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: calc(100% - 10px); /* Ajustat per evitar desbordament */
+    max-width: 200px; /* Per limitar la mida màxima */
+    margin: 0 auto;
+    display: block;
+}
+
+.formulari-producte button.btn-afegir-carret:hover {
+    background-color: #466f57;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.missatge-avís {
+    background-color: #ffdddd;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+
+
+/* El carret es manté fixat a la part inferior de la pantalla fins que arriba al footer */
+#carret {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f7f1;
+    border-top: 1px solid #dcdcdc;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    transition: bottom 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+
+footer {
+    background-color: #68b684;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 100%;
+    position: relative;
+    z-index: 500;
+}
+
+/* Responsivitat per a pantalles petites */
+@media (max-width: 768px) {
+    #carret {
+        max-height: 200px;
+    }
+}
+
+.user-profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Fer que la imatge sigui rodona */
+    object-fit: cover;
+}
